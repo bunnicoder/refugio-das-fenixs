@@ -1,4 +1,4 @@
-# refúgio-das-fenixs
+# Refúgio-das-fenixs
 Este é um projeto simples feito com Python para criar um espaço de apoio emocional e reflexão.
 
 ## Como funciona
