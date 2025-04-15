@@ -1,21 +1,40 @@
 import random
 from datetime import datetime
 
-mensagens_de_apoio = [
-    "Você é mais forte do que pensa. 🌟",
-    "A fênix renasce...e você também. 🔥",
-    "Estou aqui com você. Sempre. 💖",
-    "Respira fundo. Está tudo bem. 🕊️",
-    "Seu coração é uma constelação de luz. ✨",
-    "O mundo precisa do seu jeitinho único. 🌸"
+print("🌈 Sentimentos que posso acolher: triste, ansiosa, feliz, sozinha")
+print("🌸✨ Boas-vindas ao Refúgio da Fênix ✨🌸")
+print("Como você está se sentindo hoje?\n")
+sentimento = input("Digite seu sentimento: ").lower()
+
+mensagens_personalizadas = {
+    "triste": [
+        "Está tudo bem chorar, sua luz ainda brilha. 🌧️",
+        "A fênix também teve dias cinzas antes de renascer. 🔥",
+    ],
+    "ansiosa": [
+        "Respira fundo, você está segura agora. 🌬️",
+        "Passo a passo, tudo se acalma. 🍃",
+    ],
+    "feliz": [
+        "Que essa alegria se espalhe por todo seu dia! ☀️",
+        "A felicidade é sua natureza brilhando. ✨",
+    ],
+    "sozinha": [
+        "Você nunca está só — estou aqui com você. 💖",
+        "O universo sempre envia companhia no tempo certo. 🌌",
+    ],
+}
+
+mensagens_gerais = [
+    "Você é importante. 🌟",
+    "Mesmo em silêncio, você vale muito. 🌙"
 ]
 
-print("🌸✨ Boas vindas ao Refúgio da Fênix ✨🌸")
-print("Como você está se sentindo hoje?\n")
+if sentimento in mensagens_personalizadas:
+    resposta = random.choice(mensagens_personalizadas[sentimento])
+else:
+    resposta = random.choice(mensagens_gerais)
 
-sentimento = input("Digite seu sentimento: ")
-
-resposta = random.choice(mensagens_de_apoio)
 print(f"\n💌 Mensagem para você: {resposta}")
 
 # Guardar no diário
